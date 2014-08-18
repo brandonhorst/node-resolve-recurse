@@ -87,7 +87,7 @@ describe('resolve-recurse', function() {
     resolve(options, function(err, module) {
       expect(err).to.not.exist;
 
-      expect(module.dependencies).to.deep.equal(depGraph.dependencies.slice(0, 1}));
+      expect(module.dependencies).to.deep.equal(depGraph.dependencies.slice(0, 1));
 
       done();
     });

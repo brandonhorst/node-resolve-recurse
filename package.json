@@ -1,6 +1,6 @@
 {
   "name": "resolve-recurse",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Recursively resolve the paths of dependent npm packages",
   "main": "lib/resolve.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/brandonhorst/node-resolve-recurse",
   "devDependencies": {
     "chai": "^1.9.1",
+    "istanbul": "^0.3.0",
     "jshint": "^2.5.3",
     "mocha": "^1.21.4"
   },
