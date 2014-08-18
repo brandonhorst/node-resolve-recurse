@@ -30,27 +30,32 @@ If you do not pass `options` to `resolve`, it will simply assume all default opt
 {
   "name": "test-module",
   "path": "/proj/node-resolve-recurse/test/test-module",
-  "version": "0.0.1",
+  "allowedVersion": "^0.0.1",
+  "actualVersion": "0.0.1",
   "dependencies": [
     {
       "name": "test-submodule-1",
       "path": "/proj/node-resolve-recurse/test/test-module/node_modules/test-submodule-1",
-      "version": "0.0.1",
+      "allowedVersion": "^0.0.1",
+      "actualVersion": "0.0.1",
       "dependencies": []
     }, {
       "name": "test-submodule-2",
       "path": "/proj/node-resolve-recurse/test/test-module/node_modules/test-submodule-2",
-      "version": "1.2.3",
+      "allowedVersion": "^1.2.3",
+      "actualVersion": "1.2.3",
       "dependencies": []
     }, {
       "name": "test-submodule-3",
       "path": "/proj/node-resolve-recurse/test/test-module/node_modules/test-submodule-3",
-      "version": "4.7.9",
+      "allowedVersion": "^4.7.9",
+      "actualVersion": "4.7.9",
       "dependencies": [
         {
           "name": "test-sub-submodule",
           "path": "/proj/node-resolve-recurse/test/test-module/node_modules/test-sub-submodule",
-          "version": "0.0.3",
+          "allowedVersion": "^0.0.3",
+          "actualVersion": "0.0.3",
           "dependencies": []
         }
       ]
