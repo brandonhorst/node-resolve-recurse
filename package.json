@@ -5,7 +5,8 @@
   "main": "lib/resolve.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test",
-    "lint": "./node_modules/jshint/bin/jshint lib"
+    "lint": "./node_modules/jshint/bin/jshint lib",
+    "cover": "./node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/resolve.js"
   },
   "repository": {
     "type": "git",
