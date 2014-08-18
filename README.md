@@ -72,8 +72,7 @@ If you do not pass `options` to `resolve`, it will simply assume all default opt
 * `path` - `String`
   - Path to an npm module to start searching for dependencies.
   - defaults to `module.filename`
-* `filter` - `Function(name, version) | String`
+* `filter` - `Function(pkg)`
   - Determine whether or not to resolve a dependency.
-  - If this is a String, it will resolve dependencies that start with this string.
-  - If this is a Function, it will be called with the `name` and `version` of each dependency, and is expected to return `true` to continue resolving, or `false` to ignore it.
+  - If this is a Function, it will be called with `pkg`, an object representation of the package.json file of each dependency, and is expected to return `true` to continue resolving, or `false` to ignore it.
   - Defaults to `null` (no filter)

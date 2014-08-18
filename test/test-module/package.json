@@ -1,6 +1,6 @@
 {
   "name": "test-module",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "dummy module for testing",
   "main": "index.js",
   "dependencies": {
