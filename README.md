@@ -1,6 +1,9 @@
 node-resolve-recurse
 ====================
 
+[![Build Status](https://travis-ci.org/brandonhorst/node-resolve-recurse.svg?branch=master)](https://travis-ci.org/brandonhorst/node-resolve-recurse)
+[![Coverage Status](https://coveralls.io/repos/brandonhorst/node-resolve-recurse/badge.png?branch=master)](https://coveralls.io/r/brandonhorst/node-resolve-recurse?branch=master)
+
 Recursively resolve the paths of dependent node packages
 
 Given the directory of a module (including the current module), generate a object with the names, versions, and paths of all modules that this module depends on, recursively.
