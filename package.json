@@ -1,6 +1,6 @@
 {
   "name": "resolve-recurse",
-  "version": "3.0.3",
+  "version": "3.0.5",
   "description": "Recursively resolve the paths of dependent npm packages",
   "main": "lib/resolve.js",
   "scripts": {
