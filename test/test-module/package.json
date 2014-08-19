@@ -7,5 +7,8 @@
     "test-submodule-1": "^0.0.1",
     "test-submodule-2": "^1.2.3",
     "test-submodule-3": "^4.7.9"
+  },
+  "someOtherDependencies": {
+  	"test-submodule-2": "^1.2.3"
   }
 }

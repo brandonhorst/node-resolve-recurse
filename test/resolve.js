@@ -4,6 +4,8 @@ var path = require('path');
 var pkg = require('../package.json')
 var resolve = require('../lib/resolve');
 
+chai.use(require("chai-as-promised"));
+
 var depGraph = {
   name: 'test-module',
   path: path.join(__dirname, 'test-module'),
@@ -51,6 +53,11 @@ describe('resolve-recurse', function() {
     });
   });
 
+  it('returns a promise', function() {
+    return expect(resolve()).to.eventually.have.property('name');
+  });
+
+
   it('gets the path and version of the provided module', function(done) {
     var options = { path: './test-module' }
 
@@ -64,6 +71,7 @@ describe('resolve-recurse', function() {
     });
   });
 
+
   it('gets dependencies of a given module', function(done) {
     var options = { path: './test-module' }
 
@@ -76,6 +84,7 @@ describe('resolve-recurse', function() {
     });
   });
 
+
   it('filters dependencies of a given module', function(done) {
     var options = {
       path: './test-module',
@@ -87,7 +96,23 @@ describe('resolve-recurse', function() {
     resolve(options, function(err, module) {
       expect(err).to.not.exist;
 
-      expect(module.dependencies).to.deep.equal(depGraph.dependencies.slice(0, 1));
+      expect(module.dependencies).to.deep.equal([depGraph.dependencies[0]]);
+
+      done();
+    });
+  });
+
+
+  it('gets dependencies from a different property', function(done) {
+    var options = {
+      path: './test-module',
+      properties: ['someOtherDependencies']
+    }
+
+    resolve(options, function(err, module) {
+      expect(err).to.not.exist;
+
+      expect(module.dependencies).to.deep.equal([depGraph.dependencies[1]]);
 
       done();
     });

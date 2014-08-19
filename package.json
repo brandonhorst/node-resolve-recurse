@@ -28,6 +28,7 @@
   "homepage": "https://github.com/brandonhorst/node-resolve-recurse",
   "devDependencies": {
     "chai": "^1.9.1",
+    "chai-as-promised": "^4.1.1",
     "coveralls": "^2.11.1",
     "istanbul": "^0.3.0",
     "jshint": "^2.5.3",
