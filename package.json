@@ -1,6 +1,6 @@
 {
   "name": "resolve-recurse",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Recursively resolve the paths of dependent npm packages",
   "main": "lib/resolve.js",
   "scripts": {
@@ -32,10 +32,9 @@
     "mocha": "^1.21.4"
   },
   "dependencies": {
-    "async": "^0.9.0",
-    "async-resolve": "^0.3.1",
     "findup": "^0.1.5",
     "lodash": "^2.4.1",
-    "semver": "^3.0.1"
+    "promise": "^5.0.0",
+    "resolve": "^1.0.0"
   }
 }
