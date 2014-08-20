@@ -8,6 +8,11 @@
     "test-submodule-2": "^1.2.3",
     "test-submodule-3": "^4.7.9"
   },
+  "bundledDependencies": [
+    "test-submodule-1",
+    "test-submodule-2",
+    "test-submodule-3"
+  ],
   "someOtherDependencies": {
   	"test-submodule-2": "^1.2.3"
   }
