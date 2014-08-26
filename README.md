@@ -74,7 +74,11 @@ If you do not pass `options` to `resolve`, it will simply assume all default opt
   - defaults to `['dependencies']`
 * `path` - `String`
   - Path to an npm module to start searching for dependencies.
-  - defaults to `module.filename`
+  - defaults to `__filename`
+* `relative` - `String`
+  - Path to the file that `path` should be resolved relative to. Useful if you are writing a library making use of `resolve-recurse`.
+  - Only used if `path` is specified.
+  - defaults to `__filename`
 * `filter` - `Function(pkg)`
   - Determine whether or not to resolve a dependency.
   - If this is a Function, it will be called with `pkg`, an object representation of the package.json file of each dependency, and is expected to return `true` to continue resolving, or `false` to ignore it.

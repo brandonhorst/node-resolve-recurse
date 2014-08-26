@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var chai = require('chai');
 var expect = chai.expect;
 var path = require('path');
@@ -79,6 +80,22 @@ describe('resolve-recurse', function() {
       expect(err).to.not.exist;
 
       expect(module.dependencies).to.deep.have.members(depGraph.dependencies);
+
+      done();
+    });
+  });
+
+  it('gets dependencies of a given module relative to another file', function(done) {
+    var options = {
+      path: 'test-submodule-1',
+      relative: path.join(__dirname, 'test-module', 'index.js')
+    };
+
+    resolve(options, function(err, module) {
+      expect(err).to.not.exist;
+
+      expect(_.omit(module, 'allowedVersion')).to.deep.equal(_.omit(depGraph.dependencies[0], 'allowedVersion'));
+      expect(module.allowedVersion).to.be.null;
 
       done();
     });
